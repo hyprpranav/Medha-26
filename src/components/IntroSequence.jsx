@@ -37,7 +37,7 @@ export default function IntroSequence({ onComplete, onSkip }) {
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <img 
-          src="/static/images/satellite.png" 
+          src="/images/satellite.png" 
           alt="Satellite"
           className="satellite"
         />
@@ -69,7 +69,7 @@ export default function IntroSequence({ onComplete, onSkip }) {
         }}
       >
         <img 
-          src="/static/images/astronaut.png" 
+          src="/images/astronaut.png" 
           alt="Astronaut"
           className="astronaut"
         />

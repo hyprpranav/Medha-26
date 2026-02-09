@@ -37,7 +37,7 @@ export default function Contact() {
       <div className="contact-background">
         <div className="contact-overlay"></div>
         <img 
-          src="/static/images/mkce_drone_view.png" 
+          src="/images/mkce_drone_view.png" 
           alt="MKCE Campus" 
           className="contact-bg-image"
         />
@@ -91,9 +91,9 @@ export default function Contact() {
         {/* Footer */}
         <motion.div className="contact-footer" variants={fadeInUp}>
           <div className="footer-logos">
-            <img src="/static/images/mkce_logo.png" alt="MKCE" />
-            <img src="/static/images/eminence_logo.png" alt="Eminence" />
-            <img src="/static/images/iete_logo.png" alt="IETE" />
+            <img src="/images/mkce_logo.png" alt="MKCE" />
+            <img src="/images/eminence_logo.png" alt="Eminence" />
+            <img src="/images/iete_logo.png" alt="IETE" />
           </div>
           <p className="footer-text">
             © 2026 MEDHA'26 | Department of ECE, MKCE

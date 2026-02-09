@@ -87,7 +87,7 @@ export default function Hero() {
           }
         }}
       >
-        <img src="/static/images/satellite.png" alt="Satellite" />
+        <img src="/images/satellite.png" alt="Satellite" />
       </motion.div>
 
       {/* Floating Meteorites */}
@@ -128,7 +128,7 @@ export default function Hero() {
         {/* Institution Header */}
         <motion.div className="institution-header" variants={fadeInUp}>
           <img 
-            src="/static/images/mkce_logo.png" 
+            src="/images/mkce_logo.png" 
             alt="MKCE Logo" 
             className="logo-mkce"
           />
@@ -137,7 +137,7 @@ export default function Hero() {
             <p>(Autonomous), Karur</p>
           </div>
           <img 
-            src="/static/images/mkce_25_years_logo.png" 
+            src="/images/mkce_25_years_logo.png" 
             alt="MKCE 25 Years" 
             className="logo-25years"
           />
@@ -152,9 +152,9 @@ export default function Hero() {
         <motion.div className="association-info" variants={fadeInUp}>
           <p>In association with</p>
           <div className="association-logos">
-            <img src="/static/images/eminence_logo.png" alt="Eminence Association" />
+            <img src="/images/eminence_logo.png" alt="Eminence Association" />
             <span>&</span>
-            <img src="/static/images/iete_logo.png" alt="IETE Students Forum" />
+            <img src="/images/iete_logo.png" alt="IETE Students Forum" />
           </div>
         </motion.div>
 

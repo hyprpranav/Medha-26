@@ -62,7 +62,7 @@ Medha/
    ```
 
 2. **Ensure all assets are in place:**
-   - Verify all image files are present in `/static/images/` directory
+   - Verify all image files are present in `/public/images/` directory
    - Required images:
      - `mkce_logo.png`
      - `mkce_25_years_logo.jpeg`
