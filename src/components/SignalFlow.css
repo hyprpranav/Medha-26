@@ -1,0 +1,134 @@
+.signal-flow-container {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  height: 100vh;
+  width: 200px;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* Subtle ripple effect */
+.signal-ripple {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+}
+
+/* Ripple waves - subtle transparent effect */
+.ripple-wave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  animation: water-ripple 3s ease-out infinite;
+}
+
+.ripple-2 {
+  animation-delay: 1s;
+}
+
+.ripple-3 {
+  animation-delay: 2s;
+}
+
+@keyframes water-ripple {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 0.3;
+    border-width: 2px;
+  }
+  50% {
+    opacity: 0.15;
+  }
+  100% {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+    border-width: 0.5px;
+  }
+}
+
+/* Additional particles for enhanced effect */
+.signal-line::before,
+.signal-line::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: var(--signal-blue);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: particle-float 4s ease-in-out infinite;
+}
+
+.signal-line::before {
+  top: 30%;
+  animation-delay: 0.5s;
+}
+
+.signal-line::after {
+  top: 70%;
+  animation-delay: 2s;
+}
+
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px) scale(1.5);
+    opacity: 0.3;
+  }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .signal-flow-container {
+    width: 3px;
+  }
+
+  .signal-line {
+    width: 2px;
+  }
+
+  .signal-pulse {
+    width: 20px;
+    height: 20px;
+  }
+
+  .pulse-core {
+    width: 8px;
+    height: 8px;
+  }
+
+  .pulse-ring,
+  .pulse-ring-2 {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-ring,
+  .pulse-ring-2,
+  .pulse-core,
+  .signal-line::before,
+  .signal-line::after {
+    animation: none;
+  }
+  
+  .signal-line {
+    filter: none;
+  }
+}

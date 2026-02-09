@@ -1,0 +1,156 @@
+.organizers-section {
+  background: linear-gradient(180deg, var(--space-blue) 0%, var(--space-dark) 100%);
+  padding: 100px 20px;
+}
+
+.coordinator-group {
+  margin-bottom: 60px;
+}
+
+.coordinator-group:last-child {
+  margin-bottom: 0;
+}
+
+.group-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--signal-blue);
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Coordinators Grid */
+.coordinators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Coordinator Card */
+.coordinator-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 35px 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.coordinator-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--signal-blue);
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.2);
+}
+
+.coordinator-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.3));
+}
+
+.coordinator-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.coordinator-designation {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.coordinator-contact {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 25px;
+  color: var(--signal-blue);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.coordinator-contact:hover {
+  background: rgba(0, 212, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Staff Card Styling */
+.staff-card .coordinator-icon {
+  color: #ffd700;
+}
+
+.staff-card .coordinator-icon svg {
+  width: 56px;
+  height: 56px;
+}
+
+/* Student Card Styling */
+.student-card .coordinator-icon {
+  color: var(--signal-blue);
+}
+
+.student-card .coordinator-icon svg {
+  width: 56px;
+  height: 56px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .organizers-section {
+    padding: 70px 16px;
+  }
+
+  .group-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .coordinators-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .coordinator-card {
+    padding: 30px 20px;
+  }
+
+  .coordinator-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .coordinator-icon svg {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .coordinator-name {
+    font-size: 1.15rem;
+  }
+
+  .coordinator-designation {
+    font-size: 0.9rem;
+  }
+
+  .coordinator-contact {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}

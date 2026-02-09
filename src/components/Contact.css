@@ -1,0 +1,259 @@
+.contact-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background */
+.contact-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.contact-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.3) saturate(0.9) contrast(1.1);
+}
+
+.contact-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 15, 0.75) 0%,
+    rgba(10, 10, 15, 0.85) 50%,
+    rgba(10, 10, 15, 0.95) 100%
+  );
+  z-index: 2;
+}
+
+/* Content */
+.contact-content {
+  position: relative;
+  z-index: 3;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Contact Title */
+.contact-title {
+  margin-bottom: 40px;
+}
+
+.contact-title {
+  margin-bottom: 50px;
+}
+
+/* Institution Details */
+.institution-details {
+  margin-bottom: 50px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.institution-details h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.institution-name {
+  font-size: 1.3rem;
+  color: var(--signal-blue);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.institution-address {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Contact Coordinators */
+.contact-coordinators {
+  margin-bottom: 60px;
+}
+
+.contact-coordinators h4 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 25px 20px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.contact-card:hover {
+  background: rgba(0, 212, 255, 0.1);
+  border-color: var(--signal-blue);
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.2);
+}
+
+.contact-name {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.contact-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgba(0, 212, 255, 0.15);
+  border: 1px solid var(--signal-blue);
+  border-radius: 25px;
+  color: var(--signal-blue);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  background: var(--signal-blue);
+  color: var(--space-dark);
+  transform: scale(1.05);
+}
+
+/* Footer */
+.contact-footer {
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.footer-logos img {
+  height: 50px;
+  width: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-logos img:hover {
+  opacity: 1;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: var(--signal-blue);
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 70px 16px;
+  }
+
+  .signal-received {
+    padding: 15px;
+  }
+
+  .signal-complete-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .signal-received h3 {
+    font-size: 1.2rem;
+  }
+
+  .signal-received p {
+    font-size: 1rem;
+  }
+
+  .institution-details {
+    padding: 20px;
+  }
+
+  .institution-details h3 {
+    font-size: 1.2rem;
+  }
+
+  .institution-name {
+    font-size: 1.1rem;
+  }
+
+  .institution-address {
+    font-size: 0.95rem;
+  }
+
+  .contact-coordinators h4 {
+    font-size: 1.1rem;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-logos {
+    gap: 20px;
+  }
+
+  .footer-logos img {
+    height: 40px;
+  }
+
+  .footer-text,
+  .footer-tagline {
+    font-size: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signal-complete-icon {
+    animation: none;
+  }
+}

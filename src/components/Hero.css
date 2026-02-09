@@ -1,0 +1,374 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 40px 20px;
+}
+
+/* Three.js Canvas Background */
+.hero-canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Satellite Background */
+.hero-satellite {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  width: 300px;
+  opacity: 0.6;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-satellite img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.3));
+}
+
+/* Floating Meteorites */
+.meteorite {
+  position: absolute;
+  background: radial-gradient(circle, rgba(255, 150, 50, 0.4) 0%, rgba(100, 50, 20, 0.2) 50%, transparent 100%);
+  border-radius: 50% 40% 50% 40%;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: 0 0 20px rgba(255, 100, 20, 0.3), inset -5px -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.meteorite-1 {
+  width: 50px;
+  height: 60px;
+  top: 20%;
+  left: 10%;
+  opacity: 0.4;
+}
+
+.meteorite-2 {
+  width: 40px;
+  height: 45px;
+  top: 60%;
+  right: 15%;
+  opacity: 0.35;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Institution Header */
+.institution-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.logo-mkce {
+  width: 100px;
+  height: auto;
+}
+
+.logo-25years {
+  width: 65px;
+  height: auto;
+}
+
+.institution-text h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text-primary);
+}
+
+.institution-text p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+}
+
+/* Department Info */
+.department-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.department-info h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Association */
+.association-info {
+  margin-bottom: 30px;
+}
+
+.association-info p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.association-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.association-logos img {
+  height: 40px;
+  width: auto;
+}
+
+.association-logos span {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+}
+
+/* Main Title */
+.hero-title {
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: 8px;
+  margin: 30px 0 20px;
+  background: linear-gradient(135deg, #00d4ff 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+/* Theme */
+.hero-theme {
+  margin: 25px 0;
+  padding: 15px 30px;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.theme-label {
+  font-size: 0.9rem;
+  color: var(--signal-blue);
+  font-weight: 600;
+  margin-right: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.theme-text {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+/* Event Details */
+.hero-details {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.detail-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--signal-blue);
+}
+
+.detail-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* CTA Button */
+.hero-cta {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 18px 50px;
+  background: linear-gradient(135deg, #00a8cc 0%, #00d4ff 100%);
+  color: var(--space-dark);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 50px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.scroll-arrow {
+  width: 2px;
+  height: 30px;
+  background: linear-gradient(to bottom, transparent, var(--signal-blue));
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .hero-satellite {
+    width: 200px;
+    right: 10%;
+  }
+
+  .hero-title {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 100vh;
+    padding: 30px 16px;
+  }
+
+  .hero-satellite {
+    width: 150px;
+    top: 5%;
+    right: 5%;
+    opacity: 0.4;
+  }
+
+  .logo-mkce {
+    width: 75px;
+  }
+
+  .logo-25years {
+    width: 50px;
+  }
+
+  .institution-text h3 {
+    font-size: 1rem;
+  }
+
+  .institution-text p {
+    font-size: 0.9rem;
+  }
+
+  .department-info h4 {
+    font-size: 0.9rem;
+  }
+
+  .association-logos img {
+    height: 40px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    letter-spacing: 4px;
+    margin: 20px 0 15px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-theme {
+    padding: 12px 20px;
+  }
+
+  .theme-label,
+  .theme-text {
+    font-size: 0.85rem;
+  }
+
+  .hero-details {
+    gap: 20px;
+  }
+
+  .detail-item {
+    font-size: 0.95rem;
+  }
+
+  .hero-cta {
+    padding: 14px 35px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .institution-header {
+    gap: 10px;
+  }
+
+  .hero-details {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-indicator {
+    animation: none;
+  }
+}

@@ -1,0 +1,155 @@
+.tracks-section {
+  background: var(--space-blue);
+  padding: 100px 20px;
+}
+
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+/* Track Card */
+.track-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.track-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--signal-blue);
+}
+
+/* Track Header */
+.track-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.track-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--signal-blue);
+  filter: drop-shadow(0 0 10px var(--signal-glow));
+}
+
+.track-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.track-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+}
+
+/* Track Domains */
+.track-domains {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.domain-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+}
+
+.domain-item:last-child {
+  border-bottom: none;
+}
+
+.domain-item:hover {
+  color: var(--text-primary);
+  padding-left: 10px;
+}
+
+.domain-bullet {
+  min-width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px currentColor;
+}
+
+/* Tracks Note */
+.tracks-note {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.tracks-note p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .tracks-section {
+    padding: 70px 16px;
+  }
+
+  .tracks-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .track-card {
+    padding: 30px 20px;
+  }
+
+  .track-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .track-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .track-title {
+    font-size: 1.3rem;
+  }
+
+  .domain-item {
+    font-size: 0.95rem;
+    padding: 12px 0;
+  }
+
+  .tracks-note {
+    padding: 20px;
+  }
+
+  .tracks-note p {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,161 @@
+/* Floating Feedback Button */
+.feedback-float-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--signal-blue), #0099cc);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.4);
+  z-index: 9999;
+  transition: box-shadow 0.3s ease;
+}
+
+.feedback-float-btn:hover {
+  box-shadow: 0 6px 30px rgba(0, 212, 255, 0.6);
+}
+
+/* Feedback Modal */
+.feedback-modal {
+  position: fixed;
+  bottom: 110px;
+  right: 30px;
+  width: 350px;
+  background: rgba(15, 20, 30, 0.98);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  overflow: hidden;
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 212, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.feedback-header h3 {
+  font-size: 1.3rem;
+  color: var(--signal-blue);
+  margin: 0;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: var(--signal-blue);
+}
+
+/* Feedback Form */
+.feedback-form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  outline: none;
+  border-color: var(--signal-blue);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.feedback-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, var(--signal-blue), #0099cc);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .feedback-float-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .feedback-modal {
+    bottom: 90px;
+    right: 20px;
+    left: 20px;
+    width: auto;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-modal {
+    max-width: none;
+  }
+}
