@@ -291,23 +291,25 @@
   }
 
   .institution-header {
-    gap: 12px;
+    gap: 10px;
   }
 
   .logo-mkce {
-    width: 70px;
+    width: 60px;
   }
 
   .logo-25years {
-    width: 45px;
+    width: 38px;
   }
 
   .institution-text h3 {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    line-height: 1.2;
   }
 
   .institution-text p {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    line-height: 1.2;
   }
 
   .department-info h4 {
@@ -362,15 +364,25 @@
   }
 
   .institution-header {
-    gap: 8px;
+    gap: 6px;
   }
 
   .logo-mkce {
-    width: 60px;
+    width: 50px;
   }
 
   .logo-25years {
-    width: 40px;
+    width: 32px;
+  }
+
+  .institution-text h3 {
+    font-size: 0.75rem;
+    line-height: 1.1;
+  }
+
+  .institution-text p {
+    font-size: 0.7rem;
+    line-height: 1.1;
   }
 
   .hero-details {
