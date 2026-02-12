@@ -14,7 +14,7 @@ function SpaceBackground() {
         factor={4} 
         saturation={0} 
         fade 
-        speed={0.5}
+        speed={1.2}
       />
     </>
   )
