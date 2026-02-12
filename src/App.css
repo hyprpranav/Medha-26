@@ -2,6 +2,8 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
 }
 
 section {
@@ -13,6 +15,8 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .section-title {
